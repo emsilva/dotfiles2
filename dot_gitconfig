@@ -1,0 +1,16 @@
+[user]
+	name = Emannuel Gomes de Lima E Silva
+	email = emsilva@br.ibm.com
+[color]
+	ui = true
+[merge]
+	conflictstyle = diff3
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main

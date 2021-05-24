@@ -185,7 +185,7 @@ let g:terminal_ansi_colors = ['#132132', '#ff6a6f', '#a9dd9d', '#fedf81', '#7098
 "endif
 
 set number
-set wrap
+set nowrap
 set encoding=utf-8
 set lazyredraw
 set ruler

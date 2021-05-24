@@ -12,12 +12,6 @@ case `uname` in
   export ZPLUG_HOME=/usr/local/opt/zplug
   source $ZPLUG_HOME/init.zsh
   ;;
-  Linux)
-  export PATH="/home/linuxbrew/.linuxbrew/Cellar/zplug/2.4.2/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/emsilva/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:$PATH"
-  $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-  export ZPLUG_HOME=/home/linuxbrew/.linuxbrew/opt/zplug
-  source $ZPLUG_HOME/init.zsh
-  ;;
 esac
 
 zplug romkatv/powerlevel10k, as:theme, depth:1

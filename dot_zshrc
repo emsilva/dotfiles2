@@ -3,9 +3,10 @@ path+=$PWD/bin
 export PATH
 
 # Setup aliases
-alias ls='ls --color=auto'
-alias llg='exa --classify --long --grid --group'
-alias tree='exa --classify --tree'
+alias ls='exa --icons'
+alias llg='exa --classify --long --grid --group --icons'
+alias tree='exa --classify --tree --icons'
+
 alias delete-empty-folders='find . -empty -type d -delete'
 
 # Setup environment

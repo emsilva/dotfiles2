@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for file in `ls -1` ; do
+	HandBrakeCLI -i $file -o ${file%%.*}.hevc.mp4 --preset="Apple 2160p60 4K HEVC Surround" --comb-detect --decomb
+done

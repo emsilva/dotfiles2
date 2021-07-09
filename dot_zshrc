@@ -6,6 +6,7 @@ export PATH
 alias ls='ls --color=auto'
 alias llg='exa --classify --long --grid --group'
 alias tree='exa --classify --tree'
+alias delete-empty-folders='find . -empty -type d -delete'
 
 # Setup environment
 export EXA_GRID_ROWS=3

@@ -1,26 +1,10 @@
-# Setup PATHs
 path+=$PWD/bin
 export PATH
 
-<<<<<<< HEAD
 
 #Aliases
 alias ls='ls --color=auto'
 
-||||||| 7b7a9fd
-=======
-# Setup aliases
-alias llg='exa --classify --long --grid --group'
-alias tree='exa --classify --tree'
-
-
-
-# Setup environment
-export EXA_GRID_ROWS=3
-export EXA_COLORS='fi=38;5;015:di=38;5;038:ex=38;5;048:ur=38;5;015:uw=38;5;203:ux=38;5;048:ue=38;5;048:gr=38;5;015:gw=38;5;203:gx=38;5;048:tr=38;5;015:tw=38;5;203:tx=38;5;048:sn=38;5;255:sb=38;5;255:uu=38;5;255:un=38;5;214:gu=38;5;255:gn=38;5;214:da=38;5;255:hd=4;38;5;015'
-
-
->>>>>>> eb42dc79f9bac18ac8b4f67c9df0afc64578c551
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -40,7 +24,7 @@ case `uname` in
   ;;
 esac
 
-zplug "romkatv/powerlevel10k", as:theme, depth:1
+zplug romkatv/powerlevel10k, as:theme, depth:1
 source $ZPLUG_HOME/repos/romkatv/powerlevel10k/powerlevel10k.zsh-theme
 zplug "cpitt/zsh-dotenv", as:plugin
 zplug "felixr/docker-zsh-completion"
@@ -49,9 +33,6 @@ zplug "zsh-users/zsh-autosuggestions",          defer:2, on:"zsh-users/zsh-compl
 zplug "zsh-users/zsh-syntax-highlighting",      defer:3, on:"zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-syntax-highlighting"
 zplug "junegunn/fzf", as:command, hook-build:"./install --bin", use:"bin/{fzf-tmux,fzf}"
-zplug "zpm-zsh/ls"
-
-zplug load
 
 # History {{{
 setopt append_history         # Allow multiple terminal sessions to all append to one zsh command history
@@ -80,9 +61,6 @@ unsetopt menu_complete # do not autoselect the first completion entry
 setopt always_to_end   # when completing from the middle of a word, move the cursor to the end of the word
 setopt auto_menu       # show completion menu on successive tab press. needs unsetop menu_complete to work
 
-# Preferences
-unsetopt autocd
-
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
 
@@ -96,8 +74,6 @@ zstyle ':completion::complete:*' cache-path ~/.zsh/cache/
 zstyle ':completion:*:functions' ignored-patterns '_*'
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm -w -w"
-
-unsetopt autocd
 
 # add red dots
 expand-or-complete-with-dots() {
@@ -185,3 +161,4 @@ export TERM="xterm-256color"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
